@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '2.0.0.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.phoenix'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compile group: 'com.github.oshi', name: 'oshi-core', version: '3.9.1'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.58'
+
+
+    /*compile group: 'net.java.dev.jna', name: 'jna', version: '5.0.0'
+    compile group: 'net.java.dev.jna', name: 'jna-platform', version: '5.0.0'*/
+}
